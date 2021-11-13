@@ -10,9 +10,12 @@ const DIST_DIR = path.join(__dirname, "/client/dist");
 const config = {
   entry: `${SRC_DIR}/index.jsx`,
   output: {
-    filename: 'bundle.js',
-    chunkFilename: '[name].chunk.js',
+    filename: '[name].bundle.js',
+    chunkFilename: '[name].bundle.js',
     path: DIST_DIR,
+  },
+  resolve: {
+    extensions: ['.js', 'jsx']
   },
   module: {
     rules: [
