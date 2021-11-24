@@ -58,7 +58,7 @@ function ReviewsRight({ productId, productName, darkMode }) {
 
   // Create state for page sort
   const [page, setPage] = useState(1);
-  const [sort, setSort] = useState('revelent');
+  const [sort, setSort] = useState('relevant');
 
   // Create state to load more page of review
   const [showAddReview, setShowAddReview] = useState(false)
@@ -119,7 +119,7 @@ function ReviewsRight({ productId, productName, darkMode }) {
         <div style={{display: 'inline-block'}}>{reviewContext.reviewMeta.reveiwTotal} reviews, sorted by  </div>
         <div style={{display: 'inline-block'}}>
           <select style={darkMode ? dropdownStyleDark : dropdownStyle} name="sortBy" id="casortByrs" onChange={resetReviews}>
-            <option style={darkMode ? dropdownStyleDark : dropdownStyle} value="revelent">Revelent</option>
+            <option style={darkMode ? dropdownStyleDark : dropdownStyle} value="relevant">Relevant</option>
             <option style={darkMode ? dropdownStyleDark : dropdownStyle} value="helpful">Helpful</option>
             <option style={darkMode ? dropdownStyleDark : dropdownStyle} value="newest">Newest</option>
           </select>
