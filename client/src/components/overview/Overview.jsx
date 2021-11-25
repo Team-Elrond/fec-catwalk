@@ -116,7 +116,7 @@ const Overview = (props) => {
           </div>
           <Suspense fallback={<div>is Loading...</div>}>
           <div className='gallery' style={props.darkMode ? {backgroundColor: '#2a2c29'} : {}}>
-            {styles[styleIndex].photos[0].url ? <img src={styles[styleIndex].photos[0].url} height='450' alt={'product img for ' + props.currentProduct.name}/> : <img src='./img/image-not-found.webp' height='450' alt='product img not available'/>}
+            {styles[styleIndex].photos[0] && styles[styleIndex].photos[0].url ? <img src={styles[styleIndex].photos[0].url} height='450' alt={'product img for ' + props.currentProduct.name}/> : <img src='./img/image-not-found.webp' height='450' alt='product img not available'/>}
           </div>
           </Suspense>
           <div className='overview-buttons'>

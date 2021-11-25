@@ -61,7 +61,7 @@ const YourOutfitItem = (props) => {
         <div className='product-card' onClick={onClickCard.bind(this)} style={props.darkMode ? {backgroundColor: '#2a2c29', border: '0px'} : {}}>
           <div className='info-container'>
             <IoMdCloseCircleOutline onClick={onDelete.bind(this)} className='delete-btn'/>
-            {styleData.photos[0].thumbnail_url ? <img src={styleData.photos[0].thumbnail_url} height='220' alt={'product img for ' + styleData.name}/> : <img src='./img/image-not-found.webp' height='220' alt='product img not available'/>}
+            {styleData.photos[0] && styleData.photos[0].thumbnail_url ? <img src={styleData.photos[0].thumbnail_url} height='220' alt={'product img for ' + styleData.name}/> : <img src='./img/image-not-found.webp' height='220' alt='product img not available'/>}
           </div>
           <h3>CATEGORY: {productData.category.toUpperCase()}</h3>
           <h2 className='product-name'>{styleData.name}</h2>

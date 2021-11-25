@@ -64,7 +64,7 @@ const RelatedProductsItem = (props) => {
         <div className='product-card' onClick={onClickCard.bind(this)} style={props.darkMode ? {backgroundColor: '#2a2c29', border: '0px'} : {}}>
           <div className='info-container'>
             <FaRegStar onClick={toggleModal.bind(this)} className='info-btn'/>
-            {styleData.photos[0].thumbnail_url ? <img src={styleData.photos[0].thumbnail_url} height='220' alt={'product img for ' + styleData.name}/> : <img src='./img/image-not-found.webp' height='220' alt='product img not available'/>}
+            {styleData.photos[0] && styleData.photos[0].thumbnail_url ? <img src={styleData.photos[0].thumbnail_url} height='220' alt={'product img for ' + styleData.name}/> : <img src='./img/image-not-found.webp' height='220' alt='product img not available'/>}
           </div>
           <h3>CATEGORY: {productData.category.toUpperCase()}</h3>
           <h2 className='product-name'>{productData.name}</h2>
